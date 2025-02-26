@@ -40,11 +40,21 @@ function populateReportCard(data) {
             currentSpan.classList.add('time', 'text-preset-4', timeframe);
             previousSpan.classList.add('previous', 'text-preset-2', timeframe);
 
-            currentSpan.innerText = `${values.current} hrs`;
+            let hrSuffixCurrent = 'hrs';
+
+            if (values.current == 1) hrSuffixCurrent = 'hr';
+
+            currentSpan.innerText = `${values.current}${hrSuffixCurrent}`;
+            
+            
             let previousPrefix = `Last ${timeframe}`;
             if (timeframe == 'day') previousPrefix = 'Yesterday';
 
-            previousSpan.innerText = `${previousPrefix}: ${values.previous}`;
+            let hrSuffixPrevious = 'hrs';
+
+            if (values.previous == 1) hrSuffixPrevious = 'hr';
+
+            previousSpan.innerText = `${previousPrefix}: ${values.previous}${hrSuffixPrevious}`;
 
             timeReport.appendChild(currentSpan);
             
