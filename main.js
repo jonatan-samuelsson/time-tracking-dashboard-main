@@ -40,7 +40,7 @@ function populateReportCard(data) {
             currentSpan.classList.add('time', 'text-preset-4', timeframe);
             previousSpan.classList.add('previous', 'text-preset-2', timeframe);
 
-            currentSpan.innerText = `${values.current}`;
+            currentSpan.innerText = `${values.current} hrs`;
             let previousPrefix = `Last ${timeframe}`;
             if (timeframe == 'day') previousPrefix = 'Yesterday';
 
