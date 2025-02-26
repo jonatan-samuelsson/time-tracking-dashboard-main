@@ -292,30 +292,17 @@ body {
 
         
 
-        .category-menu, .category-menu::before, .category-menu::after {
-            content: "";
-            background-color: var(--clr-Pale-blue);
-            width: .25rem;
-            height: .25rem;
-            border-radius: 100%;
+        .category-menu {
+            
+            color: var(--clr-Pale-blue);
+            
 
             &:hover {
-                background-color: #fff;
+                color: #fff;
             }
         }
         
-        .category-menu {
-            position: relative;
-
-            &::before {
-                position: absolute;
-                left: -200%;
-            }
-            &::after {
-                position: absolute;
-                left: -400%;
-            }
-        }
+        
 
         .previous {
             color: var(--clr-Pale-blue);
@@ -380,7 +367,7 @@ body {
 
 @media screen and (40rem <= width < 75rem) {
     .report-card {
-        grid-template-columns: repeat(2, 235px);
+        grid-template-columns: repeat(2, 270px);
 
         .user-dashboard {
             grid-column-end: span 2;
